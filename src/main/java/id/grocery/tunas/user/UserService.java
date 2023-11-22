@@ -27,11 +27,11 @@ public class UserService {
         data.forEach(o -> {
             JSONObject dataUser = (JSONObject) o;
             UserDto userDto = new UserDto();
-            userDto.id = dataUser.getInt("id");
-            userDto.email = dataUser.getString("email");
-            userDto.first_name = dataUser.getString("first_name");
-            userDto.last_name = dataUser.getString("last_name");
-            userDto.avatar = dataUser.getString("avatar");
+            userDto.setId(dataUser.getInt("id"));
+            userDto.setEmail(dataUser.getString("email"));
+            userDto.setFirst_name(dataUser.getString("first_name"));
+            userDto.setLast_name(dataUser.getString("last_name"));
+            userDto.setAvatar(dataUser.getString("avatar"));
             users.add(userDto);
         });
 
@@ -44,11 +44,11 @@ public class UserService {
         JSONObject object = json.getBody().getObject();
         JSONObject dataUser = object.getJSONObject("data");
         UserDto userDto = new UserDto();
-        userDto.id = dataUser.getInt("id");
-        userDto.email = dataUser.getString("email");
-        userDto.first_name = dataUser.getString("first_name");
-        userDto.last_name = dataUser.getString("last_name");
-        userDto.avatar = dataUser.getString("avatar");
+        userDto.setId(dataUser.getInt("id"));
+        userDto.setEmail(dataUser.getString("email"));
+        userDto.setFirst_name(dataUser.getString("first_name"));
+        userDto.setLast_name(dataUser.getString("last_name"));
+        userDto.setAvatar(dataUser.getString("avatar"));
 
         return userDto;
     }

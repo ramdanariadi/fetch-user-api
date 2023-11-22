@@ -1,13 +1,11 @@
 package id.grocery.tunas.user;
 
 public class UserDto {
-    Integer id;
-    String email;
-    String first_name;
-    String last_name;
-    String avatar;
-
-
+    private Integer id;
+    private String email;
+    private String first_name;
+    private String last_name;
+    private String avatar;
 
     public Integer getId() {
         return id;
